@@ -1,0 +1,46 @@
+.about {
+  
+    &_content {
+        max-width: 320px;
+        .active &{
+            animation-name: slide-right ;
+            animation-duration: 1s ;
+            animation-timing-function: ease ;
+        }
+    }
+    &_video {
+        width: 480px;
+        height: 270px;
+        .active &{
+            animation-name: slide-left ;
+            animation-duration: 1s ;
+            animation-timing-function: ease ;
+        }
+    }
+    &_title {
+        font-size: 18px;
+    }
+    &_desc {
+        line-height: 20px;
+        font-size: 14px;
+        letter-spacing: 0.03em;
+        text-transform: lowercase;
+        
+    }
+}
+
+
+@media screen and (max-width : 900px ){
+    .about{
+        flex-direction: column;
+        &_content{
+            margin: 0 auto 30px;
+        }
+        &_video {
+            width: 100%;
+            max-width: 480px;
+            display: block;
+            margin: 0 auto ;
+        }
+    }   
+  }

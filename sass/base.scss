@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1C1C1C;
+  border: 20px solid rgb(255, 255, 255);
+  color: #F2F2F2;
+  font-family: Montserrat;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: Montserrat;
+}
+
+a,
+a:hover,
+a:visited,
+a:focus {
+  text-decoration: none;
+  font-size: .9rem ;
+  font-weight: 700 ;
+  font-family: Montserrat;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  font-family: Montserrat;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 14px;
+  color: #F2F2F2;
+}
+
+.btn {
+  display: inline-block;
+  user-select: none;
+  padding: 8px 32px;
+  background-color: #F2F2F2;
+  border: 1px #F2F2F2 solid;
+  color: #1C1C1C;
+  font-size: .9rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn.ghost {
+  background-color: transparent;
+  border-color: #1C1C1C;
+  color: #F2F2F2;
+}
+
+label {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #F2F2F2;
+}
+
+input[type='text'],
+textarea {
+  display: block;
+  width: 100%;
+  background: #F7F7F7;
+  color: #333333;
+  font-size: 14px;
+  font-family: Montserrat;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  margin: 10px 0;
+}
+
+input[type='text'] {
+  height: 35px;
+  text-indent: 20px;
+}
+
+textarea {
+  padding: 20px;
+}
+
+.social_list {
+  padding: 0;
+  li {
+    display: inline-block;
+    a {
+      display: inline-block;
+      color: #F2F2F2;
+      font-weight: 700;
+      font-size: 14px;
+      font-family: Montserrat;
+      text-align: center;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      user-select: none;
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
+      &:hover {
+        color: #000000;
+        background-color: #F2F2F2;
+        &::before {}
+      }
+    }
+  }
+}
+
+.scrollbar {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 2px;
+  margin: 20px 60px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.scrollbar:hover {
+  opacity: 1;
+}
+
+.scrollbar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  background: white;
+  cursor: pointer;
+}
+
+.scrollbar::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 155px;
+  background: white;
+  cursor: pointer;
+}
+
+// style for screen less than 1100px .
+@media screen and (max-width: 1100px) {
+  body {
+    border: none;
+  }
+  .scrollbar {
+    display: none;
+  }
+}
+
+.wraper{
+  display: flex ;
+  flex-direction: row ;
+  justify-content: space-around ;
+}

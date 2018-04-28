@@ -1,0 +1,90 @@
+.team {
+    &_item {
+        max-width: 200px;
+        text-align: center;
+        .active &:nth-child(1){
+            animation-name: slide-right ;
+            animation-duration: 1s ;
+            animation-timing-function: ease ;
+        }
+        .active &:nth-child(3){
+            animation-name: slide-left ;
+            animation-duration: 1s ;
+            animation-timing-function: ease ;
+        }
+    }
+    &_img_container{
+        height: 200px ;
+        width: 200px ;
+        overflow: hidden;
+        position: relative;
+        background-color: rgb(255, 0, 0);
+        
+    }
+    &_img{
+        transition: transform 500ms ease ;
+        height: 100%;
+        width: auto;
+        position: relative;
+        &:hover{
+           
+                transform: scale(1.1);
+            
+        }
+        
+    }
+    &_title {
+        font-size: 18px;
+    }
+    &_desc {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .team {
+        flex-direction: column;
+        justify-content: space-evenly;
+        &_info {
+            padding: 0 10px;
+        }
+        &_item {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            max-width: initial;
+            margin: 40px 0;
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+            .active &:nth-child(odd){
+                animation-name: slide-left ;
+                animation-duration: 1s ;
+                animation-timing-function: ease ;
+            }
+            .active &:nth-child(even){
+                animation-name: slide-right ;
+                animation-duration: 1s ;
+                animation-timing-function: ease ;
+            }
+        }
+        &_img {
+            width: 100%;
+            max-width: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .team {
+        &_item {
+            flex-direction: column;
+            &:nth-child(even) {
+                flex-direction: column;
+            }
+        }
+        &_img {
+            max-width: inherit;
+        }
+    }
+}

@@ -1,0 +1,83 @@
+.hero {
+  &.active {
+    .hero__video-container,
+    .hero__filter {
+      animation-name: fade-in;
+      animation-duration: 3s;
+      animation-timing-function: ease;
+    }
+    .hero__text{
+      animation-name: fade-in;
+      animation-duration: 3s;
+      animation-timing-function: ease;  
+    }
+  }
+  &__video-container,
+  &__filter {
+    position: absolute;
+    z-index: 0;
+    overflow: hidden;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  &__video {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  &__filter {
+    background-color: rgba(0, 0, 0, 0.90);
+    z-index: 2;
+  }
+  &__content {
+    position: relative;
+    z-index: 3;
+    max-height: 500px;
+    margin: 20px 60px;
+    text-align: center;
+  }
+  &__text {
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+  }
+  &__title {font-size: 3rem ;}
+  &__desc { font-size: 1.2rem ;}
+  &__btn{
+    margin: 2rem  1rem  ;
+  }
+  &__img-container {
+    display: inline-block;
+    width: 50%;
+  }
+  &__img {
+    width: 80%;
+    max-width: 500px ;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+.hero{
+  &__content {
+    max-height: none;
+    margin: 20px;
+  }
+  &__text {
+    display: block;
+    width: 100%;
+  }
+  &__title {font-size: 2rem ;}
+  &__desc { font-size: 1rem ;}
+  &__img-container {
+    display: none;
+    
+  }
+}
+
+}
+
+@media screen and (max-width: 1100px) {
+
+}

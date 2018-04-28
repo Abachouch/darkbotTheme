@@ -1,0 +1,35 @@
+.contact {
+    &_form,
+    &_info {
+        width: 50%;
+        padding: 20px;
+    }
+    &_details {
+        font-weight: 500;
+        font-size: 14px;
+        margin: 10px 0;
+    }
+    &_social_list {
+        margin-top: 0;
+    }
+    &_map {
+        height: 300px;
+        margin-top: 30px;
+    }
+    &_adress,
+    &_followus {
+        font-size: 18px;
+        margin: 22px 0 2px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .contact {
+        flex-direction: column;
+        &_form,
+        &_info {
+            width: 100%;
+            padding: 20px;
+        }
+    }
+}
